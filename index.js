@@ -28,6 +28,7 @@ function changeImage() {
     carouselImage.src = images[currentImageIndex];
 }
 
+setInterval(changeImage, 3000);
 // Initialize Progress Bar
 updateProgress(0);
 
