@@ -11,6 +11,22 @@ function updateProgress(amount) {
     progressBar.style.width = progressPercentage + '%';
     progressText.innerText = `${currentAmount.toLocaleString()} NGN of ${targetAmount.toLocaleString()} NGN raised`;
 }
+// Image Carousel
+const images = [
+    'image1.jpeg',
+    'image2.jpeg',
+    'image3.jpg',
+    'image4.jpeg',
+    'image5.jpg',
+    'image6.jpeg'
+];
+let currentImageIndex = 0;
+
+function changeImage() {
+    const carouselImage = document.getElementById('carousel-image');
+    currentImageIndex = (currentImageIndex + 1) % images.length;
+    carouselImage.src = images[currentImageIndex];
+}
 
 // Initialize Progress Bar
 updateProgress(0);
